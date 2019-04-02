@@ -1,18 +1,90 @@
 *{
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
-	padding: 0px;
-	margin: 0px;
-	/*outline: 1px purple solid;*/
+	outline: 1px green solid;
 	font-family: sans-serif;
 }
 
-.logo{
-	width: 100px;
-	height: 100px;
-	text-align: center;
-	line-height: 100px;
+body{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	padding: 30px;
 }
 
-p{
-	margin-top: 50px;
+.encabezado_principal{
+	position: relative;
+	width: 100%;
+	height: 10%;
+	/*background-color: orange;*/
 }
+
+.logo{
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	height: 100%;
+	/*background-color: green;*/
+	padding: 0.5%;
+}
+.logo>img{
+	height: 100%;
+	/*background-color: pink;*/
+}
+
+.nav-principal{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 2em;
+	/*background-color: red;*/
+
+}
+
+.nav-principal>ul>li{
+	display: inline-block;
+	/*line-height: 3em;*/
+	text-align: center;
+	width: 200px;
+	list-style: none;
+	/*border-radius: 1.5em 1.5em 0 0;*/
+	border-bottom: solid pink 2em;
+	border-left: solid transparent 2em;
+	border-right: solid transparent 2em;
+	/*background-color: green;*/
+}
+.nav-principal>ul>li>a{
+	position: absolute;
+	/*left: 0px;*/
+	margin-left: -25px;
+	text-align: center;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-decoration: none;
+}
+
+.nav-principal>ul>li>ul{
+	display: none;
+}
+
+.cuerpo_principal{
+	width: 100%;
+	height: 90%;
+	padding: 10px 10px;
+	border: solid red 5px;
+	border-radius: 15px 0 15px 15px;
+	overflow-y: scroll;
+
+}
+
+.cuerpo_principal>section{
+	width: 75%;
+	min-width: 400px;
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
