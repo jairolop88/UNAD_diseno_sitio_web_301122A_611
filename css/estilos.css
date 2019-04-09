@@ -129,3 +129,69 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/*css para video 20190404*/
+/*css para actividades 20190404*/
+
+.video video, .actividad embed {
+	width: 85%;
+	margin: 20px 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.video, .actividad{
+	padding: 10px 10%;
+}
+
+
+/*para caja de red social tweeter*/
+
+.social_flotante{
+	position: fixed;
+	right: 0;
+	top: 50vh;
+	transform: translateY(-50%);
+	
+}
+
+.social_flotante label{	
+	display: block;
+	width: 50px;
+	height: 50px;
+	transition: width .5s, height .5s;		
+	background-color: pink;
+	border-radius: 5px 0 0 5px;
+}
+.social_flotante label .barra{
+	
+}
+.social_flotante label .icon_redSocial{
+	
+}
+.social_flotante label img{
+}
+
+.social_flotante label h2{
+	
+}
+
+.social_flotante label embed{
+	display: none;
+}
+
+
+.social_flotante input[type="checkbox"]{
+	display: none;
+}
+
+
+.social_flotante input[type="checkbox"]:checked + label{
+	background-color: red;
+	width: 250px;
+	height: 300px;
+	transition: width .5s, height .5s;
+}
