@@ -152,27 +152,38 @@ body{
 
 .social_flotante{
 	position: fixed;
-	right: 0;
+	right: 5px;
 	top: 50vh;
 	transform: translateY(-50%);
 	
 }
 
 .social_flotante label{	
+	border-radius: 50%;
 	display: block;
 	width: 50px;
 	height: 50px;
-	transition: width .5s, height .5s;		
-	background-color: pink;
-	border-radius: 5px 0 0 5px;
+	/*overflow: hidden;*/
+	/*background-color: pink;	*/
+	transition: width .5s ease-out, height .5s ease-out, border-radius .5s ease-out;	
 }
 .social_flotante label .barra{
-	
+/*	height: 54px;
+	width: 100%;
+	padding: 3px;*/
 }
 .social_flotante label .icon_redSocial{
-	
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	border-radius: 50%;
+	overflow: hidden;
 }
 .social_flotante label img{
+	overflow: hidden;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
 }
 
 .social_flotante label h2{
@@ -191,7 +202,21 @@ body{
 
 .social_flotante input[type="checkbox"]:checked + label{
 	background-color: red;
-	width: 250px;
-	height: 300px;
+	width: 400px;
+	height: 350px;
+	border-radius: 10px 0 0 10px;
+	overflow-y: scroll;
 	transition: width .5s, height .5s;
+}
+.social_flotante input[type="checkbox"]:checked + label .icon_redSocial{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.social_flotante input[type="checkbox"]:checked + label .barra{
+	/*background-color: pink;*/
 }
