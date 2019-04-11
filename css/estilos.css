@@ -3,12 +3,28 @@
 	padding: 0;
 	box-sizing: border-box;
 	/*outline: 1px green solid;*/
-	font-family: sans-serif;
-	--color_01: rgb(45,89,43);
-	--color_02: rgb(45,89,163);
-	--color_03: rgb(45,189,53);
-	--color_04: rgb(145,89,73);
+	font-family: FranklinGothicBook;
 
+	--color_azul: #005883;
+	--color_amarillo: #f0b429;
+	--color_anaranjado: #f47920;
+	--color_gris_oscuro: #333333;
+	--color_gris_medio: #808080;
+	--color_gris_claro: #b3b3b3;
+
+}
+
+@font-face {
+	font-family: AngsanaNew;
+	src: url(../fonts/angsa.ttf);
+}
+@font-face{
+	font-family: FranklinGothicBook;
+	src: url("../fonts/Franklin Gothic Book Regular.ttf");
+}
+@font-face{
+	font-family: FranklinGothicHeavy;
+	src: url("../fonts/franklin-gothic-heavy.ttf");
 }
 
 body{
@@ -27,10 +43,17 @@ body{
 
 .logo{
 	display: inline-block;
-	position: absolute;
+	position: relative;
 	left: 0;
 	height: 100%;
 	padding: 0.8%;
+}
+
+.encabezado_principal span{
+	display: inline-block;
+	font-size: 34px;
+	margin-left: 40px; 
+	font-family: FranklinGothicHeavy;
 }
 
 .logo>img{
@@ -58,20 +81,24 @@ body{
 
 .nav-principal a{	
 	text-decoration: none;
-	background-color: var(--color_02);	
+	background-color: var(--color_azul);	
+	color: #ddd;
+	box-shadow: 0 0 5px var(--color_gris_claro);
+	font-family: AngsanaNew;
+	font-size: 26px;
 	display: block;
 	text-align: center;
-	width: 150px;
+	padding: 0 30px;
 	line-height: 40px;
 }
 
-.nav-principal a:hover{	
-	background-color: var(--color_03);
-	transition: background-color .3s;
+.nav-principal a:hover{		
+	color: var(--color_anaranjado);
+	transition: color .3s ease-out;
 }
 
 .nav-principal ul li:hover li{	
-	/*display: block;*/
+	display: block;
 }
 
 .nav-principal ul li{
@@ -81,6 +108,7 @@ body{
 
 .nav-principal li ul{
 	position: absolute;
+	width: max-content;
 	overflow: hidden;
 	height: 0;
 }	
@@ -93,8 +121,10 @@ body{
 .cuerpo_principal{
 	width: 100%;
 	height: 90%;
-	padding: 30px 10px;
-	border: solid red 5px;
+	padding: 30px 20px;
+	/*border: solid red 5px;*/
+	background-color: rgba(0,88,131,0.15);
+	box-shadow: 0 0 15px var(--color_gris_claro);
 	border-radius: 15px 0 0 15px;
 	overflow: auto;
 }
@@ -133,51 +163,71 @@ body{
 /*css para video 20190404*/
 /*css para actividades 20190404*/
 
-.video video, .actividad embed {
-	width: 85%;
+.video iframe, 
+.actividad embed {
+	width: 50vw;
+	min-width: 560px;
+	height: 50vh;
+	min-height: 315px;
 	margin: 20px 0;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: hidden;
-	border-radius: 10px;
+	padding: 10px;
+	/*overflow: hidden;*/
+	/*border-radius: 10px;*/
 }
 
 .video, .actividad{
 	padding: 10px 10%;
+	text-align: center;
 }
 
+.autores{
+	height: 150px;
+	width: 85%;
+	/*vertical-align: middle;*/
+	margin: 20px 0;
+
+}
+.autores img{
+	display: inline-block;
+	margin: 0;
+	height: 150px;
+	width: 150px;
+}
+.autores div{
+	margin-left: 30px;
+	display: inline-block;
+	height: 148px;
+	position: relative;
+	bottom: 15px;
+	/*vertical-align: 	;*/
+}
 
 /*para caja de red social tweeter*/
 
 .social_flotante{
 	position: fixed;
-	right: 5px;
+	right: 10px;
 	top: 50vh;
-	transform: translateY(-50%);
-	
+	transform: translateY(-50%);	
 }
-
 .social_flotante label{	
 	border-radius: 50%;
 	display: block;
-	width: 50px;
-	height: 50px;
-	/*overflow: hidden;*/
-	/*background-color: pink;	*/
-	transition: width .5s ease-out, height .5s ease-out, border-radius .5s ease-out;	
-}
-.social_flotante label .barra{
-/*	height: 54px;
-	width: 100%;
-	padding: 3px;*/
-}
-.social_flotante label .icon_redSocial{
-	width: 50px;
-	height: 50px;
-	background-color: red;
-	border-radius: 50%;
 	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	transition: width .5s ease-out, height .5s ease-out, border-radius .95s ease-out;	
+}
+.social_flotante input[type="checkbox"]:checked + label{
+	width: 400px;
+	height: 300px;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0 0 15px var(--color_gris_claro);
+	transition: width .5s, height .5s;
 }
 .social_flotante label img{
 	overflow: hidden;
@@ -185,38 +235,18 @@ body{
 	width: 50px;
 	height: 50px;
 }
-
-.social_flotante label h2{
-	
+.social_flotante input[type="checkbox"]:checked + label img{
+	position: absolute;
+	left: -55px;
 }
 
-.social_flotante label embed{
-	display: none;
+.social_flotante label .cuerpo{
+	/*display: none;*/
 }
-
+.social_flotante input[type="checkbox"]:checked + label .cuerpo{
+	/*display: contents;*/
+}
 
 .social_flotante input[type="checkbox"]{
 	display: none;
-}
-
-
-.social_flotante input[type="checkbox"]:checked + label{
-	background-color: red;
-	width: 400px;
-	height: 350px;
-	border-radius: 10px 0 0 10px;
-	overflow-y: scroll;
-	transition: width .5s, height .5s;
-}
-.social_flotante input[type="checkbox"]:checked + label .icon_redSocial{
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	background-color: red;
-	border-radius: 50%;
-	overflow: hidden;
-}
-
-.social_flotante input[type="checkbox"]:checked + label .barra{
-	/*background-color: pink;*/
 }
