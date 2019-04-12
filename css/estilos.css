@@ -54,6 +54,14 @@ body{
 	font-size: 34px;
 	margin-left: 40px; 
 	font-family: FranklinGothicHeavy;
+	text-align: center;
+}
+.cuerpo_principal span{
+	display: block;
+	font-size: 34px;
+	margin-left: 40px; 
+	font-family: FranklinGothicHeavy;
+	text-align: center;
 }
 
 .logo>img{
@@ -249,4 +257,12 @@ body{
 
 .social_flotante input[type="checkbox"]{
 	display: none;
+}
+
+a>img{
+	position: fixed;
+	z-index: 999;
+	height: 20px;
+	/*left: 50px;*/
+	bottom: 50px;
 }
