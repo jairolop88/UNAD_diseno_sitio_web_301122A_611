@@ -149,9 +149,13 @@ body{
 	margin: 1em 0;
 }
 
-.cuerpo_principal article p{
+.cuerpo_principal article p,
+.cuerpo_principal article li{
 	font-size: 20px;
 	line-height: 1.5em;
+}
+.cuerpo_principal article li{
+	margin-left: 30px;
 }
 .cuerpo_principal	h1{
 	font-size: 24px;
@@ -265,4 +269,24 @@ a>img{
 	height: 20px;
 	/*left: 50px;*/
 	bottom: 50px;
+}
+
+table{
+	border-collapse: collapse;
+	margin: auto;
+}
+td, th{
+	height: 50px;
+}
+td{
+	margin-left: 5px;
+	padding: 15px;	
+}
+
+tr:nth-child(even){
+	background-color: #eee;
+}
+
+tr:nth-child(odd){
+	background-color: grey;
 }
